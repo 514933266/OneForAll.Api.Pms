@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PmsCostRepository.cs" />
+    <Compile Remove="PmsModuleRepository.cs" />
+    <Compile Remove="PmsValuationRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="OneForAll.Core" Version="1.2.0.3" />
+    <PackageReference Include="OneForAll.EFCore" Version="1.2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pms.Domain\Pms.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

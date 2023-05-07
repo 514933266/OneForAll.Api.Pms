@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PmsCostManager.cs" />
+    <Compile Remove="PmsModuleManager.cs" />
+    <Compile Remove="PmsValuationManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="OneForAll.Core" Version="1.2.0.3" />
+    <PackageReference Include="OneForAll.EFCore" Version="1.2.2.4" />
+    <PackageReference Include="OneForAll.File" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pms.HttpService\Pms.HttpService.csproj" />
+    <ProjectReference Include="..\Pms.Public\Pms.Public.csproj" />
+  </ItemGroup>
+
+</Project>

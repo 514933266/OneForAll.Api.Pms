@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <UserSecretsId>a3fefc2f-4e7e-48c5-90d0-551d30848d72</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="App_Start\**" />
+    <Compile Remove="Commom\**" />
+    <Compile Remove="Controllers\OA\**" />
+    <Compile Remove="Controllers\PmsC\**" />
+    <Compile Remove="Images\**" />
+    <Content Remove="App_Start\**" />
+    <Content Remove="Commom\**" />
+    <Content Remove="Controllers\OA\**" />
+    <Content Remove="Controllers\PmsC\**" />
+    <Content Remove="Images\**" />
+    <EmbeddedResource Remove="App_Start\**" />
+    <EmbeddedResource Remove="Commom\**" />
+    <EmbeddedResource Remove="Controllers\OA\**" />
+    <EmbeddedResource Remove="Controllers\PmsC\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="App_Start\**" />
+    <None Remove="Commom\**" />
+    <None Remove="Controllers\OA\**" />
+    <None Remove="Controllers\PmsC\**" />
+    <None Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\DepartmentsController.cs" />
+    <Compile Remove="Controllers\OrgUsersController.cs" />
+    <Compile Remove="Controllers\UsergroupsController.cs" />
+    <Compile Remove="Profiles\PmsCostProfile.cs" />
+    <Compile Remove="Profiles\PmsFunctionPointProfile.cs" />
+    <Compile Remove="Profiles\PmsModuleProfile.cs" />
+    <Compile Remove="Profiles\PmsProjectMemberContactProfile.cs" />
+    <Compile Remove="Profiles\PmsTaskMemberProfile.cs" />
+    <Compile Remove="Profiles\PmsValuationProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.0" />
+    <PackageReference Include="OneForAll.Core" Version="1.2.0.3" />
+    <PackageReference Include="OneForAll.EFCore" Version="1.2.2.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="upload\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pms.Application\Pms.Application.csproj" />
+    <ProjectReference Include="..\Pms.Domain\Pms.Domain.csproj" />
+    <ProjectReference Include="..\Pms.HttpService\Pms.HttpService.csproj" />
+    <ProjectReference Include="..\Pms.Public\Pms.Public.csproj" />
+    <ProjectReference Include="..\Pms.Repository\Pms.Repository.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
